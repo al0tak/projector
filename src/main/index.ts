@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 import { join } from 'path'
 
-function createWindow(): void {
+const createWindow = (): void => {
   const window = new BrowserWindow({
     width: 1024,
     height: 768,

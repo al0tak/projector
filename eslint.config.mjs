@@ -3,6 +3,7 @@ import tseslint from 'typescript-eslint'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import unicorn from 'eslint-plugin-unicorn'
+import preferArrowFunctions from 'eslint-plugin-prefer-arrow-functions'
 import prettier from 'eslint-config-prettier'
 
 export default tseslint.config(
@@ -17,7 +18,9 @@ export default tseslint.config(
   },
   {
     files: ['src/**/*.{ts,tsx}'],
+    plugins: { 'prefer-arrow-functions': preferArrowFunctions },
     rules: {
+      'prefer-arrow-functions/prefer-arrow-functions': 'error',
       'no-restricted-syntax': [
         'error',
         {
